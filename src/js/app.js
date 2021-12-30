@@ -1,12 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
-    scrollNav();
-
-    navegacionFija();
-});
-
 
 // Navbar on scroll
-function navegacionFija() {
+
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
@@ -24,9 +18,9 @@ function navegacionFija() {
 
 
     }
-}
 
-function scrollNav() {
+
+
     const enlaces = document.querySelectorAll('.nav-links li a');
 
     enlaces.forEach(function (enlace) {
@@ -39,7 +33,7 @@ function scrollNav() {
             });
         });
     });
-}
+
 
 
 // Mobile hamburguer
