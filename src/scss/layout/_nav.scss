@@ -47,7 +47,10 @@
                 }
             }
             top: 100%;
-            box-shadow: 2px 2px 2px 2px #00000021;
+            @media screen and(max-width: 850px) {
+                 box-shadow: 2px 2px 2px 2px #00000021;
+            }
+           
         }
     }
     .contenedor-1 {
