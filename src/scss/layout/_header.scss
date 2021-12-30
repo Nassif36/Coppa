@@ -1,0 +1,42 @@
+.site-header {
+    background:linear-gradient(to right, #00000063, #0000002f), url(../../img/bg-header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+    .header-flex {
+        display: flex;
+        align-items: center;
+         min-height: 80vh;
+         @media screen and(max-width: 850px) {
+             justify-content: center;
+         }
+    }
+    .header-text {
+        @include grid;
+        background-color: $white;
+        height: 100%;
+        border-radius: 3px;
+        padding: 2em 6em;
+        @include box-shadow;
+        @media screen and(max-width: 850px) {
+            padding: 1em 3em;
+            background-color: transparent;
+            h1 {
+                color: $black;
+            }
+        }
+        color: $black-secondary;
+        h1 {
+            letter-spacing: 2px;
+            max-width: 10ch;
+            line-height: 70px
+        }
+        button {
+            @include button($blue, $white);
+            max-width: 220px;
+            margin: 1em 0;
+        }
+    }
+}

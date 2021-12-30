@@ -1,0 +1,30 @@
+@mixin grid {
+    display: grid;
+    place-content: center;
+}
+
+@mixin button($background, $color) {
+    background-color: $background;
+    color: $color;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    padding: .5em .8em;
+    text-transform: uppercase;
+    max-width: 220px;
+    font-weight: 600;
+
+    
+}
+@mixin box-shadow {
+    -webkit-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
+     border: 1px solid #80808025;
+}
+@mixin contenedor-75 {
+    padding: 2em 1em;
+    max-width: calc(73vw + 5%);
+    @media screen and(max-width: 1360px) {
+        max-width: 85vw;
+    }
+}

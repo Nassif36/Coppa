@@ -1,0 +1,57 @@
+*, *:before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+        font-family: 'Poppins',
+        sans-serif;
+
+
+}
+input,button,textarea {
+    border: none;
+    outline: none;
+}
+img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+li {
+    list-style: none;
+}
+a, button, li {
+    text-decoration: none;
+    font-size: $font-text;
+}
+
+h1 {
+    font-size: $font-big;
+
+}
+h2 {
+    font-size: $font-big-medium;
+}
+
+h3 {
+    font-size: $font-middle;
+}
+
+.contenedor-1 {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.mobile {
+    @media screen and(min-width: 1050px) {
+        display: none;
+    }
+}
+.desktop {
+    @media screen and(max-width: 1050px) {
+        display: none;
+    }
+}
