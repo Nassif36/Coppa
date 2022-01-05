@@ -4,6 +4,9 @@
     justify-content: space-between;
     padding: 2em .5em;
     transition: all .8s ease;
+     width: 100%;
+     background-color: $white;
+     z-index: 15;
     .bars {
         display: flex;
         flex-direction: column;
@@ -34,12 +37,12 @@
     }
   
     &.fixed {
-        position: fixed;
-         transition: all .8s ease;
-          width: 100%;
-        background-color: $white;
+        position: sticky;
+        transition: all .8s ease;
+        width: 100%;
         z-index: 50;
         box-shadow: 2px 2px 2px 2px #00000021;
+        animation: fixed .8s ease;
         .nav-links {
             li {
                 a {
@@ -129,3 +132,14 @@
         }
     }
 }
+ @keyframes fixed {
+     from {
+         transform: translateY(-15%);
+         opacity: .3;
+     }
+
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
