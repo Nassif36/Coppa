@@ -12,7 +12,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    min-height: 100vh;
+    min-height: 75vh;
     height: 100%;
 
     svg {
@@ -32,10 +32,10 @@
         padding: 2em;
         text-align: left;
         @include box-shadow;
-        background: linear-gradient(to bottom, transparent 45%, $white 0);
+        background: linear-gradient(to bottom, $white 45%, $white 0);
         border-color: transparent;
         border-radius: 9px;
-
+    
         @media screen and(max-width: 900px) {
             margin: 0 auto;
             grid-template-columns: 1fr;
@@ -48,6 +48,7 @@
             h2 {
                 text-transform: uppercase;
                 padding: 1em 0 0 0;
+                border-bottom: 2px solid $blue;
             }
 
             p {
@@ -104,7 +105,7 @@
             height: 100%;
             width: 100%;
             border: 2px solid transparent;
-            border-top-color: $blue;
+          
             background-color: $white;
             transition: all .5s ease;
             border-radius: 6px;
@@ -112,20 +113,24 @@
             @media screen and(max-width: 1050px) {
                 grid-row: auto;
             }
-
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5em;
+                padding: 0 0 1.5em 0;
+            }
             &:hover {
-                transform: scale(1.05);
-                box-shadow: none;
+
                 border-color: $blue;
             }
 
             h3 {
                 text-align: center;
-                padding: 0 0 1.5em 0;
-                font-weight: 400;
-                letter-spacing: .5px;
-                max-width: max-content;
-                margin: 0 auto;
+               
+                font-weight: 600;
+
+                
 
 
             }
@@ -141,7 +146,7 @@
                 gap: .5em;
 
                 li {
-                    font-weight: 200;
+                    font-weight: 400;
                     padding: 1em;
 
                     i {
@@ -155,5 +160,25 @@
                 }
             }
         }
+    }
+}
+
+.whatsapp-floating {
+    position: fixed;
+   
+    bottom: 4%;
+    right: 2%;
+    
+
+    i {
+        font-size: 2.7rem;
+        color: rgb(255, 255, 255);
+        background-color: #25D366;
+        border-radius: 100%;
+        clip-path: circle();
+        padding: .3em;
+        aspect-ratio: 1 / 1;
+        transition: all .8s ease;
+        
     }
 }

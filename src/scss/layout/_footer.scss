@@ -26,9 +26,10 @@
             flex-direction: column;
 
             input,textarea {
-                padding: .5em .3em;
+                padding: .8em ;
                 border-radius: 3px;
                 @include box-shadow;
+                background-color: $white;
                 resize: none;
                 transition: all .8s ease;
                 &:focus {
@@ -56,8 +57,8 @@
                     z-index: -1;
                     position: absolute;
                     inset: 0;
-                    transform: scale(0);
-                    clip-path: circle();
+                    transform:translateY(250%);
+      
                     transition: all .8s ease;
                 }
                 &:hover {
@@ -65,7 +66,9 @@
                     border-color: $blue;
                     &::after {
                         
-                        transform: scale(5);
+                         transform:translateY(1%);
+                   
+                       
                     }
                 }
             }

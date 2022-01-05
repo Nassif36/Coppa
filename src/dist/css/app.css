@@ -9,7 +9,8 @@ body {
 
 input, button, textarea {
   border: none;
-  outline: none; }
+  outline: none;
+  font-size: 1rem; }
 
 img {
   width: 100%;
@@ -78,10 +79,12 @@ h3 {
     z-index: 50;
     box-shadow: 2px 2px 2px 2px #00000021; }
     .site-navigation.fixed .nav-links {
-      top: 100%;
-      box-shadow: 2px 2px 2px 2px #00000021; }
+      top: 100%; }
       .site-navigation.fixed .nav-links li a {
         color: #333; }
+      @media screen and (max-width: 850px) {
+        .site-navigation.fixed .nav-links {
+          box-shadow: 2px 2px 2px 2px #00000021; } }
   .site-navigation .contenedor-1 {
     display: flex;
     align-items: center;
@@ -108,7 +111,7 @@ h3 {
     font-weight: 600; }
     .site-navigation .nav-logo li a.contaduria {
       color: #fff;
-      background-color: #0a5de2;
+      background-color: #5db7dd;
       padding: .3em .5em;
       border-radius: 3px;
       margin: 0 .1em; }
@@ -168,13 +171,13 @@ h3 {
         padding: 1em 3em;
         background-color: transparent; }
         .site-header .header-text h1 {
-          color: #000; } }
+          color: #fff; } }
     .site-header .header-text h1 {
       letter-spacing: 2px;
       max-width: 10ch;
       line-height: 70px; }
     .site-header .header-text button {
-      background-color: #0a5de2;
+      background-color: #5db7dd;
       color: #fff;
       border: 2px solid transparent;
       border-radius: 3px;
@@ -194,7 +197,7 @@ h3 {
   right: 0;
   left: 0;
   bottom: 0;
-  min-height: 100vh;
+  min-height: 75vh;
   height: 100%; }
   .site-about svg {
     position: absolute; }
@@ -216,7 +219,7 @@ h3 {
     -moz-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
     border: 1px solid #80808025;
-    background: linear-gradient(to bottom, transparent 45%, #fff 0);
+    background: linear-gradient(to bottom, #fff 45%, #fff 0);
     border-color: transparent;
     border-radius: 9px; }
     @media screen and (max-width: 1360px) {
@@ -232,7 +235,8 @@ h3 {
       place-content: center; }
       .site-about .about-grid .about-text h2 {
         text-transform: uppercase;
-        padding: 1em 0 0 0; }
+        padding: 1em 0 0 0;
+        border-bottom: 2px solid #5db7dd; }
       .site-about .about-grid .about-text p {
         max-width: 84ch;
         padding: 1em 0; }
@@ -260,7 +264,7 @@ h3 {
   .site-services .services-grid .services-title {
     padding: 10% 0; }
     .site-services .services-grid .services-title h2 {
-      border-bottom: 2px solid #0a5de2;
+      border-bottom: 2px solid #5db7dd;
       text-transform: uppercase;
       max-width: max-content; }
   .site-services .services-grid .service-card {
@@ -274,36 +278,49 @@ h3 {
     height: 100%;
     width: 100%;
     border: 2px solid transparent;
-    border-top-color: #0a5de2;
     background-color: #fff;
     transition: all .5s ease;
     border-radius: 6px; }
     @media screen and (max-width: 1050px) {
       .site-services .services-grid .service-card {
         grid-row: auto; } }
+    .site-services .services-grid .service-card header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5em;
+      padding: 0 0 1.5em 0; }
     .site-services .services-grid .service-card:hover {
-      transform: scale(1.05);
-      box-shadow: none;
-      border-color: #0a5de2; }
+      border-color: #5db7dd; }
     .site-services .services-grid .service-card h3 {
       text-align: center;
-      padding: 0 0 1.5em 0;
-      font-weight: 400;
-      letter-spacing: .5px;
-      max-width: max-content;
-      margin: 0 auto; }
+      font-weight: 600; }
     .site-services .services-grid .service-card ul {
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: .5em; }
       .site-services .services-grid .service-card ul li {
-        font-weight: 200;
+        font-weight: 400;
         padding: 1em; }
         .site-services .services-grid .service-card ul li i {
           color: green; }
         .site-services .services-grid .service-card ul li:nth-child(2n + 1) {
           background-color: #f4f4f493; }
+
+.whatsapp-floating {
+  position: fixed;
+  bottom: 4%;
+  right: 2%; }
+  .whatsapp-floating i {
+    font-size: 2.7rem;
+    color: white;
+    background-color: #25D366;
+    border-radius: 100%;
+    clip-path: circle();
+    padding: .3em;
+    aspect-ratio: 1 / 1;
+    transition: all .8s ease; }
 
 .svg-footer {
   display: block;
@@ -317,7 +334,7 @@ h3 {
   padding: 5% 0 0 0;
   flex-direction: column; }
   .site-footer h2 {
-    border-bottom: 2px solid #0a5de2;
+    border-bottom: 2px solid #5db7dd;
     text-transform: uppercase;
     max-width: max-content;
     margin: 2em 0; }
@@ -331,21 +348,22 @@ h3 {
       margin: 1.5em;
       flex-direction: column; }
       .site-footer form .campo input, .site-footer form .campo textarea {
-        padding: .5em .3em;
+        padding: .8em;
         border-radius: 3px;
         -webkit-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
         box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
         border: 1px solid #80808025;
+        background-color: #fff;
         resize: none;
         transition: all .8s ease; }
         .site-footer form .campo input:focus, .site-footer form .campo textarea:focus {
-          border-color: #0a5de2; }
+          border-color: #5db7dd; }
       .site-footer form .campo button {
         padding: .6em .3em;
         max-width: 150px;
         color: #fff;
-        background-color: #0a5de2;
+        background-color: #5db7dd;
         -webkit-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
         box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
@@ -365,11 +383,10 @@ h3 {
           z-index: -1;
           position: absolute;
           inset: 0;
-          transform: scale(0);
-          clip-path: circle();
+          transform: translateY(250%);
           transition: all .8s ease; }
         .site-footer form .campo button:hover {
-          color: #0a5de2;
-          border-color: #0a5de2; }
+          color: #5db7dd;
+          border-color: #5db7dd; }
           .site-footer form .campo button:hover::after {
-            transform: scale(5); }
+            transform: translateY(1%); }
