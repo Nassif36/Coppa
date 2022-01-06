@@ -14,9 +14,11 @@
     bottom: 0;
     min-height: 95vh;
     height: 100%;
+    padding:4em 0 0 0;
 
     svg {
-        position: absolute
+        position: absolute;
+        top: 0;
     }
 
     .about-grid {
@@ -24,11 +26,13 @@
         grid-template-columns: repeat(2, 50%);
         @include contenedor-75;
         z-index: 4;
-        position: absolute;
+        position: sticky;
         right: 0;
+
         left: 0;
         top: 20%;
         margin: 0 auto;
+
         padding: 2em;
         text-align: left;
         @include box-shadow;
@@ -87,7 +91,7 @@
         gap: 1em 2em;
 
         .services-title {
-            padding: 10% 0;
+            padding: 15% 0 5% 0;
 
             h2 {
                 border-bottom: 2px solid $blue;
@@ -120,10 +124,7 @@
                 gap: .5em;
                 padding: 0 0 1.5em 0;
             }
-            &:hover {
-
-                border-color: $blue;
-            }
+            
 
             h3 {
                 text-align: center;
@@ -181,4 +182,26 @@
         transition: all .8s ease;
         
     }
+}
+
+@media (min-width:950px) {
+
+    .fade-in {
+        opacity: 0;
+    }
+    
+    .fade-in.appear {
+        transition: all 2.7s ease;
+        opacity: 1;
+        &:nth-child(2){
+            transition-duration: 2.3s;
+        }
+        &:nth-child(3){
+            transition-duration: 2s;
+        }
+    }
+
+
+
+    
 }

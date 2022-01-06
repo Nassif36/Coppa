@@ -209,17 +209,19 @@ h3 {
   left: 0;
   bottom: 0;
   min-height: 95vh;
-  height: 100%; }
+  height: 100%;
+  padding: 4em 0 0 0; }
   .site-about svg {
-    position: absolute; }
+    position: absolute;
+    top: 0; }
   .site-about .about-grid {
     display: grid;
     place-content: center;
     grid-template-columns: repeat(2, 50%);
-    padding: 2em 1em;
+    padding: 4em 1em;
     max-width: calc(73vw + 5%);
     z-index: 4;
-    position: absolute;
+    position: sticky;
     right: 0;
     left: 0;
     top: 20%;
@@ -263,7 +265,7 @@ h3 {
 .site-services .services-grid {
   display: grid;
   place-content: center;
-  padding: 2em 1em;
+  padding: 4em 1em;
   max-width: calc(73vw + 5%);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   min-height: 100vh;
@@ -273,7 +275,7 @@ h3 {
     .site-services .services-grid {
       max-width: 85vw; } }
   .site-services .services-grid .services-title {
-    padding: 10% 0; }
+    padding: 15% 0 5% 0; }
     .site-services .services-grid .services-title h2 {
       border-bottom: 2px solid #5db7dd;
       text-transform: uppercase;
@@ -301,8 +303,6 @@ h3 {
       justify-content: center;
       gap: .5em;
       padding: 0 0 1.5em 0; }
-    .site-services .services-grid .service-card:hover {
-      border-color: #5db7dd; }
     .site-services .services-grid .service-card h3 {
       text-align: center;
       font-weight: 600; }
@@ -333,6 +333,17 @@ h3 {
     padding: .3em;
     aspect-ratio: 1 / 1;
     transition: all .8s ease; }
+
+@media (min-width: 950px) {
+  .fade-in {
+    opacity: 0; }
+  .fade-in.appear {
+    transition: all 2.7s ease;
+    opacity: 1; }
+    .fade-in.appear:nth-child(2) {
+      transition-duration: 2.3s; }
+    .fade-in.appear:nth-child(3) {
+      transition-duration: 2s; } }
 
 .svg-footer {
   display: block;
