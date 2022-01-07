@@ -17,7 +17,6 @@ const bundleSass = () => {
 
 function minificarcss() {
     return src('src/scss/app.scss')
-    return src('src/scss/appSecondary.scss')
         .pipe(compileSass({
             outputStyle: 'compressed'
         }))
