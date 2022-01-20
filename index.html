@@ -18,7 +18,7 @@
     <nav class="site-navigation " id="barra">
         <div class="contenedor-1">
             <div class="nav-logo">
-                <li><a href="#inicio" class="contaduria">Coppa </a></li>
+                <li><a href="#inicio" class="contaduria">Coppa <i class="fas fa-calculator"></i></a> </li>
                 <div class="bars">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -40,7 +40,8 @@
     <header class="site-header" id="inicio">
         <div class="header-flex contenedor-1">
             <div class="header-text">
-                <h1>Servicios de contaduria </h1>
+                <p>Bienvenidos a Coppa Tax Services</p>
+                <h1>Asesoria para hispanoablantes</h1>
 
                 <button>cuentame mas!</button>
             </div>
@@ -121,22 +122,36 @@
     </main>
         
     <footer class="site-footer" id="contacto">
+       
         <div class="footer-title">
             <h2 >Contactanos</h2>
         </div>
+         <div class="footer-col-3">
+             <p>Estaremos encantados de ayudarle con todas sus preguntas relacionadas con los impuestos.</p>
+             <p>Deje sus datos en nuestro formulario de contacto y nos pondremos en contacto para analizar su duda.</p>
+             <p>También puede llamarnos al +31 650576073 para una consulta gratuita</p>
+         </div>
         <form action="#">
             <div class="campo">
                 <label for="nombre">* Campo obligatorio</label>
-                <input type="text" name="nombre" placeholder="Tú nombre">
+                <input type="text" name="nombre" placeholder="Tú nombre" required>
                
             </div>
             <div class="campo">
-                <label for="apellido">* Campo obligatorio</label>
-                <input type="text" name="apellido" placeholder="Tú apellido">
+                <label for="numero">* Campo obligatorio</label>
+                <input type="number" name="numero" placeholder="Numero" required>
+            </div>
+            <div class="campo">
+                <label for="email">* Campo obligatorio</label>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="campo">
+                <label for="asunto">* Campo obligatorio</label>
+                <input type="text" name="asunto" placeholder="Asunto" >
             </div>
             <div class="campo">
                  <label for="mensaje">* Campo obligatorio</label>
-                <textarea name="mensaje" placeholder="Consulta"></textarea>
+                <textarea name="mensaje" placeholder="Consulta" required></textarea>
             </div>
             <div class="campo">
                 <button>Enviar</button>

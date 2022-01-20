@@ -37,12 +37,12 @@
                 }
             }
             button {
+                @include button($blue, $white);
                 padding: .6em .3em;
                 max-width: 150px;
-                color: $white;
-                background-color: $blue;
+
                 @include box-shadow;
-                border-radius: 2px;
+
                 position: relative;
                 overflow: hidden;
                 z-index: 4;
@@ -73,5 +73,20 @@
                 }
             }
         }
+    }
+}
+
+.footer-col-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 38%));
+    gap: 1em;
+    padding:2.5em 0;
+    max-width: 85vw;
+    place-content: center;
+    margin: 0 1em;
+    p {
+       box-shadow: $shadow;
+       padding: 1em;
+
     }
 }

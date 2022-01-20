@@ -15,7 +15,7 @@
     }
     .header-text {
         @include grid;
-        background-color: $white;
+
         height: 100%;
         border-radius: 3px;
         padding: 2em 6em;
@@ -27,11 +27,14 @@
                 color: $white;
             }
         }
-        color: $black-secondary;
+        color: $white-secondary;
         h1 {
             letter-spacing: 2px;
-            max-width: 10ch;
+            max-width: 14ch;
             line-height: 70px
+        }
+        p {
+            padding: 0 .5em;
         }
         button {
             @include button($blue, $white);
