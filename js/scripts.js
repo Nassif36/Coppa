@@ -61,7 +61,7 @@ const faders = document.querySelectorAll('.fade-in');
 const appearOptions = {
     root: null,
     trashold: 0.5,
-    rootMargin: "0px 0px -250px 0px"
+    rootMargin: "0px 0px -333px 0px"
 };
 
 

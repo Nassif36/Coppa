@@ -202,9 +202,34 @@ h3 {
       text-transform: uppercase;
       max-width: 220px;
       font-weight: 600;
-      max-width: 220px;
+      -webkit-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
+      border: 1px solid #80808025;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 4;
+      transition: all .8s ease;
+      cursor: pointer;
       margin: 1em 0;
-      text-align: center; }
+      padding: .6em .6em; }
+      .site-header .header-text a::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        transform: translateY(250%);
+        transition: all .8s ease; }
+      .site-header .header-text a:hover {
+        color: #5db7dd;
+        border-color: #5db7dd; }
+        .site-header .header-text a:hover::after {
+          transform: translateY(1%); }
 
 .site-main {
   background: linear-gradient(to right, #fff, #fdfdfd); }
@@ -346,12 +371,12 @@ h3 {
   .fade-in {
     opacity: 0; }
   .fade-in.appear {
-    transition: all 2.7s ease;
+    transition: all 3s ease;
     opacity: 1; }
     .fade-in.appear:nth-child(2) {
-      transition-duration: 2.3s; }
+      transition-duration: 3.3s; }
     .fade-in.appear:nth-child(3) {
-      transition-duration: 2s; } }
+      transition-duration: 2.7s; } }
 
 .svg-footer {
   display: block;

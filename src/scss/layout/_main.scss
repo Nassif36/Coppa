@@ -191,13 +191,13 @@
     }
     
     .fade-in.appear {
-        transition: all 2.7s ease;
+        transition: all 3s ease;
         opacity: 1;
         &:nth-child(2){
-            transition-duration: 2.3s;
+            transition-duration: 3.3s;
         }
         &:nth-child(3){
-            transition-duration: 2s;
+            transition-duration: 2.7s;
         }
     }
 
