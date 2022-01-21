@@ -36,10 +36,11 @@
         p {
             padding: 0 .5em;
         }
-        button {
+        a {
             @include button($blue, $white);
             max-width: 220px;
             margin: 1em 0;
+            text-align: center;
         }
     }
 }

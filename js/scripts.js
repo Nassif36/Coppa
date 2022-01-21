@@ -21,7 +21,7 @@
 
 
 
-    const enlaces = document.querySelectorAll('.nav-links li a');
+    const enlaces = document.querySelectorAll('.enlace a');
 
     enlaces.forEach(function (enlace) {
         enlace.addEventListener('click', function (e) {

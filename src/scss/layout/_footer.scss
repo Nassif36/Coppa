@@ -9,6 +9,17 @@
     justify-content: center;
     padding: 5% 0 0 0;
     flex-direction: column;
+    @include contenedor-75;
+    margin: 0 auto;
+    .footer-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4em;
+        @media screen and(max-width: 850px) {
+            flex-wrap: wrap;
+        }
+    }
     h2 {
         border-bottom: 2px solid $blue;
         text-transform: uppercase;
@@ -22,9 +33,11 @@
         .campo {
             display: flex;
             gap: .3em;
-            margin: 1.5em;
+            margin: 1.5em 0;
             flex-direction: column;
-
+            label {
+                color: #16161642
+            }
             input,textarea {
                 padding: .8em ;
                 border-radius: 3px;
@@ -40,9 +53,7 @@
                 @include button($blue, $white);
                 padding: .6em .3em;
                 max-width: 150px;
-
                 @include box-shadow;
-
                 position: relative;
                 overflow: hidden;
                 z-index: 4;
@@ -58,17 +69,14 @@
                     position: absolute;
                     inset: 0;
                     transform:translateY(250%);
-      
                     transition: all .8s ease;
                 }
                 &:hover {
                     color: $blue;
                     border-color: $blue;
-                    &::after {
-                        
+                    &::after {                    
                          transform:translateY(1%);
                    
-                       
                     }
                 }
             }
@@ -78,15 +86,39 @@
 
 .footer-col-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 38%));
     gap: 1em;
     padding:2.5em 0;
-    max-width: 85vw;
     place-content: center;
-    margin: 0 1em;
+    margin-bottom: auto;
+    max-width: 750px;
     p {
        box-shadow: $shadow;
+       max-width: 90ch;
        padding: 1em;
-
     }
 }
+  .footer-links {
+        width: 100%;
+        padding: 6em 0 1em 0;
+      .links-flex {
+         display:grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+         align-items:center;
+         gap: 2em;
+      }
+      h3 {
+          text-transform: uppercase;
+          padding: 1em 0;
+      }
+      a {
+          padding: .3em 0;
+          color: #06138a;
+          border-bottom: 2px solid #06138a;
+          transition: all .5s ease;
+          &:hover {
+              transform: translateY(-5px);
+              border-color: #06138a32;
+          }
+
+      }
+  }
