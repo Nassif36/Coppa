@@ -29,7 +29,7 @@ a, button, li {
   font-size: 1rem; }
 
 h1 {
-  font-size: calc(2rem + 1.5vw); }
+  font-size: calc(1.5rem + 1.5vw); }
 
 h2 {
   font-size: calc(1.1rem + .5vw); }
@@ -123,25 +123,25 @@ h3 {
       border-radius: 33px;
       margin: 0 .1em; }
   .site-navigation.opened .nav-links {
-    left: 0; }
+    transform: translateX(0); }
   .site-navigation .nav-links {
     display: flex;
     justify-content: space-between;
     flex-basis: 40%;
     gap: 1em;
-    transition: all .5s ease; }
+    transition: all .8s ease; }
     @media screen and (min-width: 850px) {
       .site-navigation .nav-links .nav-logo {
         display: none; } }
     @media screen and (max-width: 850px) {
       .site-navigation .nav-links {
         position: absolute;
+        transform: translateX(350%);
         background-color: white;
-        left: 100%;
-        right: 0;
+        width: 100%;
         flex-direction: column;
         padding: 2em;
-        top: 11.6%;
+        top: 9.6%;
         gap: 2em; } }
     .site-navigation .nav-links li a {
       color: #333;
@@ -181,12 +181,6 @@ h3 {
     box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
     border: 1px solid #80808025;
     color: #faf8f8; }
-    @media screen and (max-width: 850px) {
-      .site-header .header-text {
-        padding: 1em 3em;
-        background-color: transparent; }
-        .site-header .header-text h1 {
-          color: #fff; } }
     .site-header .header-text h1 {
       letter-spacing: 2px;
       max-width: 14ch;
@@ -230,6 +224,19 @@ h3 {
         border-color: #5db7dd; }
         .site-header .header-text a:hover::after {
           transform: translateY(1%); }
+    @media screen and (max-width: 850px) {
+      .site-header .header-text {
+        padding: 1em 2em;
+        background-color: transparent;
+        box-shadow: unset;
+        text-align: center;
+        border: none; }
+        .site-header .header-text h1 {
+          color: #fff;
+          max-width: 100%;
+          line-height: normal; }
+        .site-header .header-text a {
+          margin: 1em auto; } }
 
 .site-main {
   background: linear-gradient(to right, #fff, #fdfdfd); }
@@ -269,7 +276,10 @@ h3 {
     border-radius: 9px; }
     @media screen and (max-width: 1360px) {
       .site-about .about-grid {
-        max-width: 85vw; } }
+        max-width: calc(90vw + 5%); } }
+    @media screen and (max-width: 850px) {
+      .site-about .about-grid {
+        max-width: calc(95vw + 5%); } }
     @media screen and (max-width: 900px) {
       .site-about .about-grid {
         margin: 0 auto;
@@ -305,9 +315,15 @@ h3 {
   gap: 1em 2em; }
   @media screen and (max-width: 1360px) {
     .site-services .services-grid {
-      max-width: 85vw; } }
+      max-width: calc(90vw + 5%); } }
+  @media screen and (max-width: 850px) {
+    .site-services .services-grid {
+      max-width: calc(95vw + 5%); } }
   .site-services .services-grid .services-title {
     padding: 15% 0 5% 0; }
+    @media screen and (max-width: 550px) {
+      .site-services .services-grid .services-title {
+        grid-column: start / end; } }
     .site-services .services-grid .services-title h2 {
       border-bottom: 2px solid #5db7dd;
       text-transform: uppercase;
@@ -335,7 +351,7 @@ h3 {
       align-items: center;
       justify-content: center;
       gap: .5em;
-      padding: 0 0 1.5em 0; }
+      padding: 0 1em; }
     .site-services .services-grid .service-card h3 {
       text-align: center;
       font-weight: 600; }
@@ -394,7 +410,10 @@ h3 {
   margin: 0 auto; }
   @media screen and (max-width: 1360px) {
     .site-footer {
-      max-width: 85vw; } }
+      max-width: calc(90vw + 5%); } }
+  @media screen and (max-width: 850px) {
+    .site-footer {
+      max-width: calc(95vw + 5%); } }
   .site-footer .footer-flex {
     display: flex;
     align-items: center;

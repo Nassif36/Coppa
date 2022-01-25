@@ -87,12 +87,15 @@
         @include contenedor-75;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         min-height: 100vh;
+        
         margin: 0 auto;
         gap: 1em 2em;
 
         .services-title {
             padding: 15% 0 5% 0;
-
+            @media screen and(max-width: 550px) {
+                grid-column: start / end;
+            }
             h2 {
                 border-bottom: 2px solid $blue;
                 text-transform: uppercase;
@@ -122,7 +125,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: .5em;
-                padding: 0 0 1.5em 0;
+                padding:0 1em;
             }
             
 

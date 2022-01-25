@@ -25,6 +25,9 @@
     padding: 4em 2em;
     max-width: calc(73vw + 5%);
     @media screen and(max-width: 1360px) {
-        max-width: 85vw;
+        max-width: calc(90vw + 5%);
+    }
+    @media screen and(max-width:850px) {
+        max-width: calc(95vw + 5%);
     }
 }

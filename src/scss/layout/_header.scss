@@ -20,13 +20,7 @@
         border-radius: 3px;
         padding: 2em 6em;
         @include box-shadow;
-        @media screen and(max-width: 850px) {
-            padding: 1em 3em;
-            background-color: transparent;
-            h1 {
-                color: $white;
-            }
-        }
+        
         color: $white-secondary;
         h1 {
             letter-spacing: 2px;
@@ -36,6 +30,7 @@
         p {
             padding: 0 .5em;
         }
+        
         a {
             @include button($blue, $white);            
             @include box-shadow;
@@ -68,6 +63,23 @@
                     transform: translateY(1%);
 
                 }
+            }
+        }
+        @media screen and(max-width: 850px) {
+            padding: 1em 2em;
+            background-color: transparent;
+            box-shadow: unset;
+            text-align: center;
+            border: none;
+
+            h1 {
+                color: $white;
+                max-width: 100%;
+                line-height: normal;
+            }
+
+            a {
+                margin: 1em auto;
             }
         }
     }
