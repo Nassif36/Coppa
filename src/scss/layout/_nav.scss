@@ -37,7 +37,7 @@
     }
   
     &.fixed {
-        position: sticky;
+        position: fixed;
         transition: all .8s ease;
         width: 100%;
         z-index: 50;

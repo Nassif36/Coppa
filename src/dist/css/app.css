@@ -5,8 +5,7 @@
   padding: 0; }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden; }
+  font-family: 'Poppins', sans-serif; }
 
 input, button, textarea {
   border: none;
@@ -76,7 +75,7 @@ h3 {
       opacity: 0;
       transform: translateX(100%); }
   .site-navigation.fixed {
-    position: sticky;
+    position: fixed;
     transition: all .8s ease;
     width: 100%;
     z-index: 50;
@@ -321,7 +320,7 @@ h3 {
     padding: 15% 0 5% 0; }
     @media screen and (max-width: 550px) {
       .site-services .services-grid .services-title {
-        grid-column: start / end; } }
+        grid-row: start; } }
     .site-services .services-grid .services-title h2 {
       border-bottom: 2px solid #5db7dd;
       text-transform: uppercase;
@@ -516,6 +515,3 @@ h3 {
     .footer-links a:hover {
       transform: translateY(-5px);
       border-color: #06138a32; }
-
-body {
-  overflow-x: hidden; }

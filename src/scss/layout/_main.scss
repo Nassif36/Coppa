@@ -94,7 +94,7 @@
         .services-title {
             padding: 15% 0 5% 0;
             @media screen and(max-width: 550px) {
-                grid-column: start / end;
+                grid-row: start;
             }
             h2 {
                 border-bottom: 2px solid $blue;
