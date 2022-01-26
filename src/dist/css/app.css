@@ -5,10 +5,8 @@
   padding: 0; }
 
 body {
-  font-family: 'Poppins', sans-serif; }
-  @media screen and (max-width: 850px) {
-    body {
-      overflow-x: hidden; } }
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; }
 
 input, button, textarea {
   border: none;
@@ -518,3 +516,6 @@ h3 {
     .footer-links a:hover {
       transform: translateY(-5px);
       border-color: #06138a32; }
+
+body {
+  overflow-x: hidden; }
