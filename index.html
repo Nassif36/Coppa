@@ -19,26 +19,28 @@
 
     
     <header class="site-header" id="inicio">
-        <nav class="site-navigation enlace" id="barra">
-            <div class="contenedor-1">
-                <div class="nav-logo">
-                    <li><a href="#inicio" class="contaduria">Coppa <i class="fas fa-calculator"></i></a> </li>
-                    <div class="bars">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                </div>
-                <div class="nav-links">
-
-                    <li><a href="#inicio">inicio</a></li>
-                    <li><a href="#nosotros">nosotros</a></li>
-                    <li><a href="#servicios">servicios</a></li>
-
-                    <li><a href="#contacto">contacto</a></li>
+         <nav class="site-navigation" id="barra">
+            <div class="logo">
+                <a href="index.html" class="logo-img">
+                    <li>coppa</li>
+                    <i class="fas fa-calculator"></i>
+                </a>
+                <div class="open-btn menu" id="menu-open">
+                    <div class="bar bar-1"></div>
+                    <div class="bar bar-2"></div>
+                    <div class="bar bar-3"></div>
                 </div>
             </div>
+            <ul class="navigation-links modal">
+                <div class="close-btn open-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                 <li><a href="#inicio">inicio</a></li>
+                <li><a href="#nosotros">nosotros</a></li>
+                <li><a href="#servicios">servicios</a></li>
 
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
 
         </nav>
         <div class="header-flex contenedor-1">
@@ -123,7 +125,7 @@
                 </article>
             </div>
         </section>
-
+          
     </main>
 
     <footer class="site-footer" id="contacto">
@@ -131,14 +133,21 @@
         <div class="footer-title">
             <h2>Contactanos</h2>
         </div>
+          
         <div class="footer-flex ">
-
+            
             <div class="footer-col-3">
                 <p>Estaremos encantados de ayudarle con todas sus preguntas relacionadas con los impuestos.</p>
                 <p>Deje sus datos en nuestro formulario de contacto y nos pondremos en contacto para analizar su
                     duda.
                 </p>
                 <p>También puede llamarnos al +31 650576073 para una consulta gratuita</p>
+                <div class="whatsapp-floating">
+                    <a href="https://api.whatsapp.com/send?phone=31650576073&text=Hola%21%20tengo%20la%20siguiente%20%20consulta."
+                        class="float" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
 
 
@@ -171,7 +180,7 @@
                 </div>
                 <p id="my-form-status"></p>
             </form>
-
+            
         </div>
         <div class="footer-links ">
             
@@ -180,18 +189,14 @@
                 <a href="https://www.kvk.nl" target="__blank">Kamer van Koophandel</a>
                 <a href="https://www.belastingdienst.nl" target="__blank">Belastingdienst</a>
                 <a href="https://www.uwv.nl" target="__blank">UWV</a>
+                
             </div>
             
         </div>
     </footer>
 
 
-    <div class="whatsapp-floating">
-        <a href="https://api.whatsapp.com/send?phone=31650576073&text=Hola%21%20tengo%20la%20siguiente%20%20consulta."
-            class="float" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+
 
 
 

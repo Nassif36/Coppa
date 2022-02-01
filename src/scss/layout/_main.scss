@@ -168,10 +168,11 @@
 }
 
 .whatsapp-floating {
-    position: fixed;
+
     z-index: 15;
-    bottom: 4%;
-    right: 2%;
+    bottom: 3%;
+    left: 100%;
+    margin: 1em;
     
 
     i {
