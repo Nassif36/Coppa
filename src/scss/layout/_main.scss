@@ -168,10 +168,11 @@
 }
 
 .whatsapp-floating {
-
+    position: fixed;
     z-index: 15;
-    bottom: 3%;
-    left: 100%;
+    
+    bottom: 0;
+    right: 0;
     margin: 1em;
     
 
@@ -184,7 +185,11 @@
         padding: .3em;
         aspect-ratio: 1 / 1;
         transition: all .8s ease;
-        
+        &:hover {
+            background-color: #f0f0f0;
+            
+            color: #25D366;
+        }
     }
 }
 

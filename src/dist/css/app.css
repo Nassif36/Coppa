@@ -226,6 +226,7 @@ h3 {
       -moz-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
       box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
       border: 1px solid #80808025;
+      max-width: 100%;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -395,9 +396,10 @@ h3 {
           background-color: #f4f4f493; }
 
 .whatsapp-floating {
+  position: fixed;
   z-index: 15;
-  bottom: 3%;
-  left: 100%;
+  bottom: 0;
+  right: 0;
   margin: 1em; }
   .whatsapp-floating i {
     font-size: 2.7rem;
@@ -408,6 +410,9 @@ h3 {
     padding: .3em;
     aspect-ratio: 1 / 1;
     transition: all .8s ease; }
+    .whatsapp-floating i:hover {
+      background-color: #f0f0f0;
+      color: #25D366; }
 
 @media (min-width: 950px) {
   .fade-in {
