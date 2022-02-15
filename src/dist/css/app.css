@@ -60,7 +60,8 @@ h3 {
   transition: all .8s ease;
   z-index: 10;
   background-color: #fff;
-  padding: 1em 9.2%; }
+  padding: 1em 9.2%;
+  box-shadow: 2px 2px 2px #00000010; }
   .site-navigation .logo {
     padding: 0 1.5em; }
     .site-navigation .logo .logo-img {

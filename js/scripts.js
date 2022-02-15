@@ -1,30 +1,7 @@
 
 
 // Navbar on scroll
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    var barraFixed = document.getElementById("barra");
 
-    if (prevScrollpos > currentScrollPos) {
-        barraFixed.style.top = "0";
-        barraFixed.style.background = "#faf8f8";
-        barraFixed.classList.add('fixed')
-
-    } else {
-        barraFixed.style.top = "-54vh";
-    }
-    if (currentScrollPos >= 5) {
-        barraFixed.style.background = "#faf8f8";
-
-    } else {
-  
-        barraFixed.classList.remove('fixed')
-
-
-    }
-    prevScrollpos = currentScrollPos;
-}
 
 // Mobile menu
 var menu = document.querySelector('.navigation-links');
