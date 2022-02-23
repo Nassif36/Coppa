@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/f69e951070.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -153,30 +154,31 @@
 
 
 
-            <form id="my-form" action="https://formspree.io/f/xlezgpyb" method="POST">
+            <form id="my-form" >
                 <div class="campo">
                     <label for="nombre">* Campo obligatorio</label>
-                    <input type="text" name="nombre" placeholder="Tú nombre" required>
+                    <input type="text" id="form-name" name="nombre" placeholder="Tú nombre" required>
 
                 </div>
-                <div class="campo">
+                <!-- <div class="campo">
                     <label for="numero">* Campo obligatorio</label>
-                    <input type="number" name="numero" placeholder="Numero" required>
-                </div>
+                    <input type="number" id="form-number" name="numero" placeholder="Numero" required>
+                </div> -->
+
                 <div class="campo">
                     <label for="email">* Campo obligatorio</label>
-                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="email" id="form-mail" name="email" placeholder="Email" required>
                 </div>
-                <div class="campo">
+               <div class="campo">
                     <label for="asunto">* Campo obligatorio</label>
-                    <input type="text" name="asunto" placeholder="Asunto">
+                    <input type="text" name="asunto" id="form-asunto" placeholder="Asunto">
                 </div>
                 <div class="campo">
                     <label for="mensaje">* Campo obligatorio</label>
-                    <textarea name="mensaje" placeholder="Consulta" required></textarea>
-                </div>
+                    <textarea name="mensaje" id="form-mensaje" placeholder="Consulta" required></textarea>
+                </div> 
                 <div class="campo">
-                    <button id="my-form-button">Enviar</button>
+                    <button onclick="getSubmitData()">Enviar</button>
                 </div>
                 <p id="my-form-status"></p>
             </form>
@@ -211,7 +213,7 @@
 
 
     <script src="./js/scripts.js"></script>
-    <script>
+    <!-- <script>
         var form = document.getElementById("my-form");
 
         async function handleSubmit(event) {
@@ -232,7 +234,7 @@
             });
         }
         form.addEventListener("submit", handleSubmit)
-    </script>
+    </script> -->
 </body>
 
 </html>

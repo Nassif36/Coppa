@@ -74,3 +74,42 @@ faders.forEach(fader => {
 
 
 
+
+
+
+
+
+
+const getSubmitData = () => {
+
+    let name = document.getElementById('form-name').value;
+    let to = document.getElementById('form-mail').value;
+    let subject = document.getElementById('form-asunto').value;
+    let body = document.getElementById('form-mensaje').value;
+
+    let url = "http://go-mails.herokuapp.com/email";
+    let data = {
+        name,
+        to,
+        subject,
+        body,
+    };
+
+    fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+        .then((res) => res.json())
+        .then((res) => {
+            console.log(res);
+        });
+
+};
+
+
+
+
+
