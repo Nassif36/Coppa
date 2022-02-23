@@ -81,11 +81,11 @@ faders.forEach(fader => {
 
 
 const getSubmitData = () => {
-
-    let name = document.getElementById('form-name').value;
-    let to = document.getElementById('form-mail').value;
-    let subject = document.getElementById('form-asunto').value;
-    let body = document.getElementById('form-mensaje').value;
+    event.preventDefault()
+    var name = document.getElementById('form-name').value;
+    var to = document.getElementById('form-mail').value;
+    var subject = document.getElementById('form-asunto').value;
+    var body = document.getElementById('form-mensaje').value;
 
     let url = "http://go-mails.herokuapp.com/email";
     let data = {
@@ -104,7 +104,12 @@ const getSubmitData = () => {
         })
         .then((res) => res.json())
         .then((res) => {
-            console.log(res);
+            if(res.status === 'ok') {
+                document.getElementById('my-form-status').innerHTML = 'Mensaje enviado correctamente';
+
+            } else {
+                document.getElementById('my-form-status').innerHTML = 'Ooops.. ocurrio un error estamos trabajando en ello';
+            }
         });
 
 };
