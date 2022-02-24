@@ -119,7 +119,14 @@ const getSubmitData = () => {
                 document.getElementById('form-mensaje').value = '';
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('my-form-status').innerHTML = 'Mensaje enviado correctamente';
+                 document.getElementById('my-form-status').style.background.color = '#008000';
+                 document.getElementById('my-form-status').style.border.radius = '3px';
+                 document.getElementById('my-form-status').style.maxWidth = '450px';
             } else {
+     
+                 document.getElementById('my-form-status').style.color = '#008000';
+                 document.getElementById('my-form-status').style.border.radius = '3px';
+                 document.getElementById('my-form-status').style.padding = '1em 2em';
                 document.getElementById('my-form-status').innerHTML = 'Ooops.. ocurrio un error estamos trabajando en ello';
             }
         });
