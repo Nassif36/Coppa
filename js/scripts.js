@@ -88,6 +88,9 @@ const getSubmitData = () => {
     let subject = document.getElementById('form-asunto').value;
     let body = document.getElementById('form-mensaje').value;
 
+    //show the loading animation
+    document.getElementById('loading').style.display = 'block';
+
     let url = "http://go-mails.herokuapp.com/email";
     let data = {
         name,
@@ -96,6 +99,8 @@ const getSubmitData = () => {
         subject,
         body,
     };
+
+    
 
     fetch(url, {
         method: "POST",
@@ -112,6 +117,7 @@ const getSubmitData = () => {
                 document.getElementById('form-mail').value = '';
                 document.getElementById('form-asunto').value = '';
                 document.getElementById('form-mensaje').value = '';
+                document.getElementById('loading').style.display = 'none';
                 document.getElementById('my-form-status').innerHTML = 'Mensaje enviado correctamente';
             } else {
                 document.getElementById('my-form-status').innerHTML = 'Ooops.. ocurrio un error estamos trabajando en ello';

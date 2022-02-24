@@ -13,7 +13,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/f69e951070.js" crossorigin="anonymous"></script>
+    <style>
+        .loader-content {
+            margin-top: 5%;
+            align-content: center;
+            display: flex;
+            margin: 0 auto;
+        }
 
+        .loader {
+            display: none;
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid #34db7f;
+            /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -185,8 +214,21 @@
                 <div class="campo">
                     <button id="my-form-status" onclick="getSubmitData()">Enviar</button>
                 </div>
+                
+                <--
+                los estilos del loader estan en el head de este index
+                despues cambialos no sabia a donde iban jaja
+                todavia esta configurado con tu correo avisame cuando 
+                termines de estilizar y lo cambio a la de la chica
+                y manda empanadas jaja XD
+                -->
+                <div class="loader-content">
+                    <div id="loading" class="loader"></div>
+                </div>
 
             </form>
+
+            
 
         </div>
         <div class="footer-links ">
