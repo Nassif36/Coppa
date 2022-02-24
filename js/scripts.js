@@ -8,8 +8,8 @@ var menu = document.querySelector('.navigation-links');
 var menuBtn = document.querySelectorAll(".open-btn");
 
 menuBtn.forEach(menuBtn => menuBtn.addEventListener('click', () => {
-     menu.classList.toggle('opened');
-     menuBtn.classList.toggle('opened');
+    menu.classList.toggle('opened');
+    menuBtn.classList.toggle('opened');
 }));
 
 var menuLink = document.querySelectorAll(".nav_links li");
@@ -18,18 +18,18 @@ menuLink.forEach(menuLink => menuLink.addEventListener('click', () => {
 }));
 
 
-    const enlaces = document.querySelectorAll('.enlace a');
+const enlaces = document.querySelectorAll('.enlace a');
 
-    enlaces.forEach(function (enlace) {
-        enlace.addEventListener('click', function (e) {
-            e.preventDefault();
-            const seccion = document.querySelector(e.target.attributes.href.value);
+enlaces.forEach(function (enlace) {
+    enlace.addEventListener('click', function (e) {
+        e.preventDefault();
+        const seccion = document.querySelector(e.target.attributes.href.value);
 
-            seccion.scrollIntoView({
-                behavior: 'smooth'
-            });
+        seccion.scrollIntoView({
+            behavior: 'smooth'
         });
     });
+});
 
 
 
@@ -78,43 +78,44 @@ faders.forEach(fader => {
 
 
 
-
+// function getSubmitData, send the data to the email server
 
 const getSubmitData = () => {
     event.preventDefault()
-    var name = document.getElementById('form-name').value;
-    var to = document.getElementById('form-mail').value;
-    var subject = document.getElementById('form-asunto').value;
-    var body = document.getElementById('form-mensaje').value;
+    let name = document.getElementById('form-name').value;
+    let number = document.getElementById('form-number').value;
+    let to = document.getElementById('form-mail').value;
+    let subject = document.getElementById('form-asunto').value;
+    let body = document.getElementById('form-mensaje').value;
 
     let url = "http://go-mails.herokuapp.com/email";
     let data = {
         name,
+        number,
         to,
         subject,
         body,
     };
 
     fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        })
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    })
         .then((res) => res.json())
         .then((res) => {
-            if(res.status === 'ok') {
+            if (res.status === 'ok') {
+                document.getElementById('form-name').value = '';
+                document.getElementById('form-number').value = '';
+                document.getElementById('form-mail').value = '';
+                document.getElementById('form-asunto').value = '';
+                document.getElementById('form-mensaje').value = '';
                 document.getElementById('my-form-status').innerHTML = 'Mensaje enviado correctamente';
-
             } else {
                 document.getElementById('my-form-status').innerHTML = 'Ooops.. ocurrio un error estamos trabajando en ello';
             }
         });
 
 };
-
-
-
-
-
