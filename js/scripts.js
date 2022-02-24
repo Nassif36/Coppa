@@ -91,7 +91,7 @@ const getSubmitData = () => {
     //show the loading animation
     document.getElementById('loading').style.display = 'block';
 
-    let url = "http://go-mails.herokuapp.com/email";
+    let url = "https://go-mails.herokuapp.com/email";
     let data = {
         name,
         number,
