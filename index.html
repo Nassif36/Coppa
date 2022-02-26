@@ -13,36 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/f69e951070.js" crossorigin="anonymous"></script>
-    <style>
-        .loader-content {
-            margin-top: 5%;
-            align-content: center;
-            display: flex;
-            margin: 0 auto;
-        }
 
-        .loader {
-            display: none;
-            border: 16px solid #f3f3f3;
-            /* Light grey */
-            border-top: 16px solid #34db7f;
-            /* Blue */
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -65,7 +36,7 @@
                 <div class="close-btn open-btn">
                     <i class="fas fa-times"></i>
                 </div>
-                <li><a href="#inicio">inicio</a></li>
+                <li><a class="active" href="#inicio">inicio</a></li>
                 <li><a href="#nosotros">nosotros</a></li>
                 <li><a href="#servicios">servicios</a></li>
 
@@ -73,7 +44,7 @@
             </ul>
 
         </nav>
-        <div class="header-flex contenedor-1">
+        <div class="header-flex contenedor-1 section">
             <div class="header-text enlace">
                 <p>Bienvenidos a Coppa Tax Service <i class="fas fa-hand-paper"></i></p>
                 <h1>Asesoria en español</h1>
@@ -84,9 +55,9 @@
 
     </header>
 
-    <main class="site-main" id="nosotros">
+    <main class="site-main " id="nosotros">
 
-        <section class="site-about ">
+        <section class="site-about section">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#5db7dd" fill-opacity="1"
                     d="M0,128L34.3,133.3C68.6,139,137,149,206,170.7C274.3,192,343,224,411,218.7C480,213,549,171,617,170.7C685.7,171,754,213,823,224C891.4,235,960,213,1029,202.7C1097.1,192,1166,192,1234,208C1302.9,224,1371,256,1406,272L1440,288L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
@@ -108,7 +79,7 @@
             </article>
         </section>
 
-        <section class="site-services" id="servicios">
+        <section class="site-services section" id="servicios">
             <div class="services-grid">
                 <div class="services-title">
                     <h2>servicios</h2>
@@ -169,15 +140,15 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
-    <footer class="site-footer" id="contacto">
+    <section class="site-form section" id="contacto">
 
         <div class="footer-title">
             <h2>Contactanos</h2>
         </div>
 
-        <div class="footer-flex ">
+        <div class="form-flex ">
 
-            <div class="footer-col-3">
+            <div class="form-col-3">
                 <p>Estaremos encantados de ayudarle con todas sus preguntas relacionadas con los impuestos.</p>
                 <p>Deje sus datos en nuestro formulario de contacto y nos pondremos en contacto para analizar sus
                     dudas.
@@ -205,7 +176,7 @@
                 </div>
                 <div class="campo">
                     <label for="asunto">* Campo obligatorio</label>
-                    <input type="text" name="asunto" id="form-asunto" placeholder="Asunto">
+                    <input type="text" name="asunto" id="form-asunto" placeholder="Asunto" required>
                 </div>
                 <div class="campo">
                     <label for="mensaje">* Campo obligatorio</label>
@@ -224,10 +195,10 @@
             
 
         </div>
-        <div class="footer-links ">
-
+        <div class="form-links ">
+             <h3>links utiles</h3>
             <div class="links-flex">
-                <h3>links utiles</h3>
+               
                 <a href="https://www.kvk.nl" target="__blank">Kamer van Koophandel</a>
                 <a href="https://www.belastingdienst.nl" target="__blank">Belastingdienst</a>
                 <a href="https://www.uwv.nl" target="__blank">UWV</a>
@@ -236,45 +207,39 @@
 
         </div>
 
+    </section>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-item">
+                <h3>COPPA TAX SERVICE</h3>
+                 <p>BTW: NL002467718B22</p>
+                <p>KVK: 73453862</p>
+               
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>EMAIL:</h3>
+                <p>info@coppataxservice.nl</p>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-phone"></i>
+                <h3>TELEFONO:</h3>
+                <p>+31 65 05 760 73</p>
+            </div>
+        </div>
     </footer>
 
 
 
 
 
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg-footer">
-        <path fill="#5db7dd" fill-opacity="1"
-            d="M0,128L34.3,133.3C68.6,139,137,149,206,170.7C274.3,192,343,224,411,218.7C480,213,549,171,617,170.7C685.7,171,754,213,823,224C891.4,235,960,213,1029,202.7C1097.1,192,1166,192,1234,208C1302.9,224,1371,256,1406,272L1440,288L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
-        </path>
-    </svg>
+ 
 
 
 
 
     <script src="./js/scripts.js"></script>
-    <!-- <script>
-        var form = document.getElementById("my-form");
 
-        async function handleSubmit(event) {
-            event.preventDefault();
-            var status = document.getElementById("my-form-status");
-            var data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                status.innerHTML = "Correo enviado!, nos pondremos en contacto pronto";
-                form.reset()
-            }).catch(error => {
-                status.innerHTML = "Oops! parece que algo salió mal"
-            });
-        }
-        form.addEventListener("submit", handleSubmit)
-    </script> -->
 </body>
 
 </html>

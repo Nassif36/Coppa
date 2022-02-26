@@ -82,9 +82,9 @@
                 padding: 1% 4%;
                 background-color: $blue;
                 gap: 2em;
-
+                
                 li a {
-           
+                    
                     color: $white;
                 
                 }
@@ -109,11 +109,21 @@
         }
 
         li {
-            a {
-                color: $black-secondary;
-                text-transform: uppercase;
-                font-weight: 400;
+            padding: .3em .6em;
+            border-radius: 33px;
+             a {
+                 color: $black-secondary;
+                 text-transform: uppercase;
+                 font-weight: 400;
+             }
+            &.active {
+                background-color: #5db7dd;
+
+                a {
+                    color: #fff;
+                }
             }
+           
 
         }
 
@@ -202,3 +212,4 @@
         opacity: 1;
     }
 }
+

@@ -58,3 +58,32 @@ h3 {
         display: none;
     }
 }
+
+ .loader-content {
+     margin-top: 5%;
+     align-content: center;
+     display: flex;
+     margin: 0 auto;
+ }
+
+ .loader {
+     display: none;
+     border: 12px solid #f3f3f3;
+     /* Light grey */
+     border-top: 12px solid #34db7f;
+     /* Blue */
+     border-radius: 50%;
+     width: 60px;
+     height: 60px;
+     animation: spin 2s linear infinite;
+ }
+
+ @keyframes spin {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
