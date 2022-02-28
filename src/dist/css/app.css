@@ -298,6 +298,19 @@ h3 {
 
 .site-main {
   background: linear-gradient(to right, #fff, #fdfdfd); }
+  @media screen and (max-width: 900px) {
+    .site-main {
+      padding: 4em 2em;
+      max-width: calc(73vw + 5%); } }
+  @media screen and (max-width: 900px) and (max-width: 1360px) {
+    .site-main {
+      max-width: calc(90vw + 5%); } }
+  @media screen and (max-width: 900px) and (max-width: 850px) {
+    .site-main {
+      max-width: calc(95vw + 5%); } }
+  @media screen and (max-width: 900px) and (max-width: 550px) {
+    .site-main {
+      max-width: calc(99vw + .5%); } }
 
 .site-about {
   position: relative;
@@ -305,25 +318,27 @@ h3 {
   right: 0;
   left: 0;
   bottom: 0;
-  min-height: 95vh;
+  min-height: 50vh;
   height: 100%;
   padding: 4em 0 0 0; }
   .site-about svg {
     position: absolute;
     top: 0; }
+    @media screen and (max-width: 900px) {
+      .site-about svg {
+        display: none; } }
   .site-about .about-grid {
+    padding: 4em 2em;
+    max-width: calc(73vw + 5%);
     display: grid;
     place-content: center;
     grid-template-columns: repeat(2, 50%);
-    padding: 4em 2em;
-    max-width: calc(73vw + 5%);
     z-index: 4;
-    position: sticky;
+    position: relative;
     right: 0;
     left: 0;
     top: 20%;
     margin: 0 auto;
-    padding: 2em;
     text-align: left;
     -webkit-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
@@ -338,6 +353,9 @@ h3 {
     @media screen and (max-width: 850px) {
       .site-about .about-grid {
         max-width: calc(95vw + 5%); } }
+    @media screen and (max-width: 550px) {
+      .site-about .about-grid {
+        max-width: calc(99vw + .5%); } }
     @media screen and (max-width: 900px) {
       .site-about .about-grid {
         margin: 0 auto;
@@ -358,9 +376,55 @@ h3 {
       display: block;
       max-width: 350px;
       margin: 0 0 0 auto; }
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 860px) {
         .site-about .about-grid .about-img img {
           margin: 0 auto; } }
+
+.site-about-ficha {
+  padding: 4em 2em;
+  max-width: calc(73vw + 5%);
+  margin: 4em auto;
+  -webkit-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 34px -22px rgba(0, 0, 0, 0.75);
+  border: 1px solid #80808025;
+  background: linear-gradient(to bottom, #fff 45%, #fff 0);
+  border-color: transparent;
+  border-radius: 9px;
+  min-height: 50vh;
+  display: grid; }
+  @media screen and (max-width: 1360px) {
+    .site-about-ficha {
+      max-width: calc(90vw + 5%); } }
+  @media screen and (max-width: 850px) {
+    .site-about-ficha {
+      max-width: calc(95vw + 5%); } }
+  @media screen and (max-width: 550px) {
+    .site-about-ficha {
+      max-width: calc(99vw + .5%); } }
+  .site-about-ficha .ficha-head {
+    padding: 1em 0;
+    text-align: center; }
+    .site-about-ficha .ficha-head span {
+      font-weight: 600;
+      border-bottom: 2px solid #5db7dd; }
+  .site-about-ficha .about-ficha-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%; }
+    .site-about-ficha .about-ficha-grid .ficha-texto {
+      margin: 0 auto; }
+      .site-about-ficha .about-ficha-grid .ficha-texto li {
+        border-bottom: 2px solid #8bcce7;
+        padding: .3em 0;
+        font-weight: 600; }
+    @media screen and (max-width: 1050px) {
+      .site-about-ficha .about-ficha-grid {
+        grid-template-columns: 1fr; }
+        .site-about-ficha .about-ficha-grid .ficha-texto {
+          margin: unset; }
+          .site-about-ficha .about-ficha-grid .ficha-texto li {
+            border-bottom: unset; } }
 
 .site-services .services-grid {
   display: grid;
@@ -377,11 +441,11 @@ h3 {
   @media screen and (max-width: 850px) {
     .site-services .services-grid {
       max-width: calc(95vw + 5%); } }
+  @media screen and (max-width: 550px) {
+    .site-services .services-grid {
+      max-width: calc(99vw + .5%); } }
   .site-services .services-grid .services-title {
     padding: 15% 0 5% 0; }
-    @media screen and (max-width: 550px) {
-      .site-services .services-grid .services-title {
-        grid-row: start; } }
     .site-services .services-grid .services-title h2 {
       border-bottom: 2px solid #5db7dd;
       text-transform: uppercase;
@@ -476,6 +540,9 @@ h3 {
   @media screen and (max-width: 850px) {
     .site-form {
       max-width: calc(95vw + 5%); } }
+  @media screen and (max-width: 550px) {
+    .site-form {
+      max-width: calc(99vw + .5%); } }
   .site-form .form-flex {
     display: flex;
     align-items: center;

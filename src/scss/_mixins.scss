@@ -36,4 +36,7 @@
     @media screen and(max-width:850px) {
         max-width: calc(95vw + 5%);
     }
+    @media screen and(max-width:550px) {
+        max-width: calc(99vw + .5%);
+    }
 }

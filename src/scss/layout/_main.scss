@@ -1,6 +1,8 @@
 .site-main {
     background: linear-gradient(to right, $white, #fdfdfd);
-
+@media screen and(max-width: 900px) {
+    @include contenedor-75;
+}
 }
 
 
@@ -12,34 +14,34 @@
     right: 0;
     left: 0;
     bottom: 0;
-    min-height: 95vh;
+    min-height: 50vh;
     height: 100%;
-    padding:4em 0 0 0;
+    padding: 4em 0 0 0;
 
     svg {
         position: absolute;
         top: 0;
+          @media screen and(max-width: 900px) {
+             display: none;
+          }
     }
 
     .about-grid {
+        @include contenedor-75;
         @include grid;
         grid-template-columns: repeat(2, 50%);
-        @include contenedor-75;
         z-index: 4;
-        position: sticky;
+        position: relative;
         right: 0;
-
         left: 0;
         top: 20%;
         margin: 0 auto;
-
-        padding: 2em;
         text-align: left;
         @include box-shadow;
         background: linear-gradient(to bottom, $white 45%, $white 0);
         border-color: transparent;
         border-radius: 9px;
-    
+
         @media screen and(max-width: 900px) {
             margin: 0 auto;
             grid-template-columns: 1fr;
@@ -69,15 +71,63 @@
                 max-width: 350px;
                 margin: 0 0 0 auto;
 
-                @media screen and(max-width: 900px) {
+                @media screen and(max-width: 860px) {
                     margin: 0 auto;
-
                 }
             }
         }
     }
 }
 
+.site-about-ficha {
+    @include contenedor-75;
+    margin: 4em auto;
+    @include box-shadow;
+
+     background: linear-gradient(to bottom, $white 45%, $white 0);
+     border-color: transparent;
+     border-radius: 9px;
+     min-height: 50vh;
+     display: grid;
+   
+
+    .ficha-head {
+        padding: 1em 0;
+        text-align: center;
+
+        span {
+            font-weight: 600;
+            border-bottom: 2px solid $blue;
+
+        }
+    }
+
+    .about-ficha-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+       
+        .ficha-texto {
+             margin: 0 auto;
+            li {
+                border-bottom: 2px solid lighten($color: $blue, $amount: 11);
+                padding: .3em 0;
+                font-weight: 600
+
+            }
+        }
+         @media screen and(max-width: 1050px) {
+             grid-template-columns: 1fr;
+
+             .ficha-texto {
+                 margin: unset;
+                 li {
+                     border-bottom: unset
+                 }
+             }
+         }
+    }
+}
 
 // Services
 
@@ -87,15 +137,13 @@
         @include contenedor-75;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         min-height: 100vh;
-        
+
         margin: 0 auto;
         gap: 1em 2em;
 
         .services-title {
             padding: 15% 0 5% 0;
-            @media screen and(max-width: 550px) {
-                grid-row: start;
-            }
+
             h2 {
                 border-bottom: 2px solid $blue;
                 text-transform: uppercase;
@@ -120,21 +168,22 @@
             @media screen and(max-width: 1050px) {
                 grid-row: auto;
             }
+
             header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: .5em;
-                padding:0 1em;
+                padding: 0 1em;
             }
-            
+
 
             h3 {
                 text-align: center;
-               
+
                 font-weight: 600;
 
-                
+
 
 
             }
@@ -170,11 +219,11 @@
 .whatsapp-floating {
     position: fixed;
     z-index: 15;
-    
+
     bottom: 0;
     right: 0;
     margin: 1em;
-    
+
 
     i {
         font-size: 2.7rem;
@@ -185,9 +234,10 @@
         padding: .3em;
         aspect-ratio: 1 / 1;
         transition: all .8s ease;
+
         &:hover {
             background-color: #f0f0f0;
-            
+
             color: #25D366;
         }
     }
@@ -198,14 +248,16 @@
     .fade-in {
         opacity: 0;
     }
-    
+
     .fade-in.appear {
         transition: all 3s ease;
         opacity: 1;
-        &:nth-child(2){
+
+        &:nth-child(2) {
             transition-duration: 3.3s;
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
             transition-duration: 2.7s;
         }
     }
