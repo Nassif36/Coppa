@@ -28,7 +28,7 @@
      border: 1px solid #80808025;
 }
 @mixin contenedor-75 {
-    padding: 4em 2em;
+    padding: $padding-section;
     max-width: calc(73vw + 5%);
     @media screen and(max-width: 1360px) {
         max-width: calc(90vw + 5%);

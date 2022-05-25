@@ -10,6 +10,10 @@ $font-big: calc(1.5rem + 1.5vw);
 $font-big-medium: calc(1.1rem + .5vw);
 $font-middle:calc(1rem + .3vw);
 $font-text: 1rem;
+$padding-section: 4em 1em;
+@media(max-width: 978px) {
+    $padding-section: 2em 1em;
+}
 
 
 // Misceallaneous

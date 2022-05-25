@@ -4,6 +4,61 @@
     @include contenedor-75;
 }
 }
+.list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    background: #fff;
+}
+
+.list__item {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    margin-top: 2em ;
+}
+
+.list__item--click {
+    cursor: pointer;
+}
+
+.list__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4em;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.arrow .list__arrow {
+    transform: rotate(90deg);
+}
+
+.list__arrow {
+
+    transition: transform .3s;
+    max-width: 45px;
+    background-color: $blue;
+    color: white;
+}
+
+.list__show {
+    width: 100%;
+    margin-right: auto;
+    color: black;
+    list-style: none;
+    text-align: left;
+    transition: height .4s;
+
+    height: 0;
+}
 
 
 // About
@@ -16,7 +71,7 @@
     bottom: 0;
     min-height: 50vh;
     height: 100%;
-    padding: 4em 0 0 0;
+    padding: 2em 0;
 
     svg {
         position: absolute;
@@ -68,7 +123,7 @@
             img {
                 width: 100%;
                 display: block;
-                max-width: 350px;
+                max-width: 330px;
                 margin: 0 0 0 auto;
 
                 @media screen and(max-width: 860px) {
@@ -79,42 +134,52 @@
     }
 }
 
-.site-about-ficha {
-    @include contenedor-75;
-    margin: 4em auto;
-    @include box-shadow;
 
-     background: linear-gradient(to bottom, $white 45%, $white 0);
-     border-color: transparent;
-     border-radius: 9px;
-     min-height: 50vh;
-     display: grid;
    
 
     .ficha-head {
         padding: 1em 0;
-        text-align: center;
+
 
         span {
             font-weight: 600;
             border-bottom: 2px solid $blue;
 
         }
+        .list__arrow {
+            margin: 1em auto;
+            border-radius: 100%;
+
+            transition: all .5s ease;
+            &:hover {
+ 
+                background-color: darken($color: $blue, $amount:25%);
+            }
+        }
     }
 
     .about-ficha-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         width: 100%;
-       
+        max-width: 1550px;
+        margin: 1em auto;
+        @include contenedor-75;
+        padding: 0;
+        margin-top: 2em;
+
         .ficha-texto {
-             margin: 0 auto;
+ 
             li {
                 border-bottom: 2px solid lighten($color: $blue, $amount: 11);
-                padding: .3em 0;
-                font-weight: 600
-
+                padding: .5em 0;
+                margin: 1em;
+                font-weight: 600;
+               
             }
+             &:last-of-type {
+                 margin-bottom: 4em;
+             }
         }
          @media screen and(max-width: 1050px) {
              grid-template-columns: 1fr;
@@ -122,12 +187,18 @@
              .ficha-texto {
                  margin: unset;
                  li {
-                     border-bottom: unset
+
+                     margin: .5em;
+                     padding: .3em 0;
+                 }
+
+                 &:last-of-type {
+                     margin-bottom: 2em;
                  }
              }
          }
     }
-}
+
 
 // Services
 

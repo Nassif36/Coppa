@@ -72,6 +72,30 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
+let listElements = document.querySelectorAll('.list__button--click');
+
+listElements.forEach(listElement => {
+    listElement.addEventListener('click', () => {
+
+        listElement.classList.toggle('arrow');
+
+        let height = 0;
+        let menu = listElement.nextElementSibling;
+        if (menu.clientHeight == "0") {
+            height = menu.scrollHeight;
+
+        }
+        if (event.target != listElement) {
+            console.log(listElement);
+
+        }
+
+
+        menu.style.height = `${height}px`;
+
+    })
+});
+
 document.addEventListener('DOMContentLoaded', function () {
 
 
