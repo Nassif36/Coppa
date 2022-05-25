@@ -570,6 +570,11 @@ h3 {
     .fade-in.appear:nth-child(3) {
       transition-duration: 2.7s; } }
 
+.volvemos {
+  display: grid;
+  min-height: 60vh;
+  place-content: center; }
+
 .svg-footer {
   display: block;
   height: 100%; }

@@ -96,6 +96,8 @@ listElements.forEach(listElement => {
     })
 });
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
 
