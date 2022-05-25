@@ -328,7 +328,7 @@ h3 {
   overflow: hidden;
   display: grid;
   place-content: center;
-  margin-top: 2em; }
+  padding-top: 5em; }
 
 .list__item--click {
   cursor: pointer; }
@@ -427,17 +427,16 @@ h3 {
         .site-about .about-grid .about-img img {
           margin: 0 auto; } }
 
-.ficha-head {
-  padding: 1em 0; }
-  .ficha-head span {
-    font-weight: 600;
-    border-bottom: 2px solid #5db7dd; }
-  .ficha-head .list__arrow {
-    margin: 1em auto;
-    border-radius: 100%;
-    transition: all .5s ease; }
-    .ficha-head .list__arrow:hover {
-      background-color: #20769a; }
+.ficha-head span {
+  font-weight: 600;
+  border-bottom: 2px solid #5db7dd; }
+
+.ficha-head .list__arrow {
+  margin: 1em auto;
+  border-radius: 100%;
+  transition: all .5s ease; }
+  .ficha-head .list__arrow:hover {
+    background-color: #20769a; }
 
 .about-ficha-grid {
   display: grid;
@@ -483,6 +482,7 @@ h3 {
   max-width: calc(73vw + 5%);
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   min-height: 100vh;
+  padding-top: 0;
   margin: 0 auto;
   gap: 1em 2em; }
   @media screen and (max-width: 1360px) {
@@ -495,7 +495,7 @@ h3 {
     .site-services .services-grid {
       max-width: calc(99vw + .5%); } }
   .site-services .services-grid .services-title {
-    padding: 15% 0 5% 0; }
+    padding: 1em 0 5% 0; }
     .site-services .services-grid .services-title h2 {
       border-bottom: 2px solid #5db7dd;
       text-transform: uppercase;
