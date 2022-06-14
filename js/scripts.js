@@ -98,8 +98,6 @@ listElements.forEach(listElement => {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-
 
     const sections = document.querySelectorAll(".section");
     const menu_links = document.querySelectorAll(".navigation-links li");
@@ -149,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
             makeActive(current);
         }
     });
-}, false);
+
 
 
 
