@@ -48,6 +48,7 @@
             </ul>
 
         </nav>
+        <div class="header-spacing"></div>
         <div class="header-flex contenedor-1 section">
             <div class="header-text enlace">
                 <p>Bienvenidos a Coppa Tax Service <i class="fas fa-hand-paper"></i></p>
@@ -196,7 +197,14 @@
 
 
 
-            <form id="my-form">
+            <form action="https://formsubmit.co/e44c2f84115903daeba6471819bc156e" method="POST" >
+                <input type="hidden" name="_subject" value="Contacto web!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://coppataxservice.nl/thank-you.html">
+
+
+
+
                 <div class="campo">
                     <label for="nombre">* Campo obligatorio</label>
                     <input type="text" id="form-name" name="nombre" placeholder="Tú nombre" required>
@@ -219,7 +227,7 @@
                     <textarea name="mensaje" id="form-mensaje" placeholder="Consulta" required></textarea>
                 </div>
                 <div class="campo">
-                    <button id="my-form-status" onclick="getSubmitData()">Enviar</button>
+                    <button id="my-form-status" type="submit"s>Enviar</button>
                 </div>
           
                 <div class="loader-content">
